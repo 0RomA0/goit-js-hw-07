@@ -28,13 +28,18 @@ const images = [
 const list = document.querySelector(".gallery");
 
   const listLi = images.map(item => {
-  const liElement = document.createElement("li");
+    const liElement = document.createElement("li");
+    liElement.classList.add("gallery-item");
+
   const image = document.createElement("img");
-  image.src = item.url;
-  image.alt = item.alt;
+    image.src = item.url;
+    image.alt = item.alt;
+    image.classList.add("gallery-image");
   liElement.append(image);
   return liElement;
   });
+
+  
   list.append(...listLi);
 
 

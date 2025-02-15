@@ -17,8 +17,9 @@ function submitForm(event)  {
         if (formData.email === "" || formData.password === "") {
          alert("All form fields must be filled in");
         }
+        else {
+            console.log(formData);
+    }
     
-    console.log(formData);
-
     event.target.reset();
 }
